@@ -1,0 +1,125 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(12,11,9,0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 1.5rem;
+  animation: fadeIn 0.2s ease both;
+}
+
+.modal {
+  background: #111009;
+  border: 1px solid var(--border-hover);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  animation: fadeUp 0.25s ease both;
+}
+
+/* Top accent line */
+.modal::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 10%; right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.5;
+}
+
+.icon { font-size: 2.25rem; margin-bottom: 1.25rem; }
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+  letter-spacing: 0.2px;
+}
+
+.sub {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  font-weight: 300;
+}
+.sub strong { color: var(--text-primary); font-weight: 500; }
+
+.priceBlock { margin-bottom: 1.75rem; }
+.priceAmount {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+.pricePer {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-left: 4px;
+}
+
+.benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  text-align: left;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.benefits li {
+  font-size: 13px;
+  color: rgba(91,191,160,0.75);
+  letter-spacing: 0.2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ctaBtn {
+  width: 100%;
+  background: var(--gold);
+  color: #0C0B09;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font-body);
+  letter-spacing: 0.5px;
+  transition: opacity 0.15s, transform 0.12s;
+  margin-bottom: 1rem;
+}
+.ctaBtn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+.note {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  padding: 4px 8px;
+  transition: color 0.15s;
+}
+.closeBtn:hover { color: var(--text-secondary); }
